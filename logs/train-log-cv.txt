@@ -1,0 +1,62 @@
+/datadisk1/ixk5174/tools/berth-ml
+Namespace(tss='data/tss_data.csv', tes='data/tes_data.csv', oversample=0.4)
+TSS: 5680 positives, 57699 negatives
+TES: 1828 positives, 62466 negatives
+Training on TSS data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.93      0.94     57699
+         1.0       0.45      0.60      0.52      5680
+
+    accuracy                           0.90     63379
+   macro avg       0.71      0.76      0.73     63379
+weighted avg       0.91      0.90      0.91     63379
+
+------------------Done with TSS data------------------
+Training on TES data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.99      0.95      0.97     62466
+         1.0       0.27      0.61      0.37      1828
+
+    accuracy                           0.94     64294
+   macro avg       0.63      0.78      0.67     64294
+weighted avg       0.97      0.94      0.95     64294
+
+------------------Done with TES data------------------

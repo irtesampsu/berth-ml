@@ -11,6 +11,18 @@ def read_tss_tes_features(fname_tss, fname_tes):
     
     return tss_data, tes_data
 
+def read_tss_tes_data(tss_file, tes_file):
+    tss_data = pd.read_csv(tss_file)
+    tss_data = tss_data.drop(columns=['chrom', 'position'])
+    tss_data['strand'] = tss_data['strand'].map({'+': 1, '-': 0})
+
+    tes_data = pd.read_csv(tes_file)
+    tes_data = tes_data.drop(columns=['chrom', 'position'])
+    tes_data['strand'] = tes_data['strand'].map({'+': 1, '-': 0})
+    return tss_data, tes_data
+
+
+
 
 def get_labels(ref_annotation, tss_data, tes_data, cfg):
     tss_labels = []

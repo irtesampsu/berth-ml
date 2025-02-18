@@ -1,0 +1,222 @@
+/datadisk1/ixk5174/tools/berth-ml
+Namespace(tss='data/tss_data.csv', tes='data/tes_data.csv', oversample=-1.0)
+TSS: 5564 positives, 54617 negatives
+TES: 629 positives, 63314 negatives
+             strand     weight_sg  ...  junction_cross_cnt         label
+count  60181.000000  60181.000000  ...        60181.000000  60181.000000
+mean       0.543760      6.923713  ...            4.429936      0.092454
+std        0.498086     72.696450  ...           25.776999      0.289669
+min        0.000000      0.000000  ...            0.000000      0.000000
+25%        0.000000      1.000000  ...            0.000000      0.000000
+50%        1.000000      1.000000  ...            1.000000      0.000000
+75%        1.000000      2.000000  ...            3.000000      0.000000
+max        1.000000   6936.000000  ...          821.000000      1.000000
+
+[8 rows x 10 columns]
+             strand     weight_sg  ...  junction_cross_cnt         label
+count  63943.000000  63943.000000  ...        63943.000000  63943.000000
+mean       0.472108      6.204151  ...            4.281172      0.009837
+std        0.499225     61.054305  ...           21.887695      0.098693
+min        0.000000      0.000000  ...            0.000000      0.000000
+25%        0.000000      1.000000  ...            0.000000      0.000000
+50%        0.000000      1.000000  ...            1.000000      0.000000
+75%        1.000000      2.000000  ...            3.000000      0.000000
+max        1.000000   7369.000000  ...          816.000000      1.000000
+
+[8 rows x 10 columns]
+strand                  0
+weight_sg               0
+weight_berth            0
+read_density            0
+leading_clip_length     0
+trailing_clip_length    0
+junction_start_cnt      0
+junction_end_cnt        0
+junction_cross_cnt      0
+label                   0
+dtype: int64
+Empty DataFrame
+Columns: [strand, weight_sg, weight_berth, read_density, leading_clip_length, trailing_clip_length, junction_start_cnt, junction_end_cnt, junction_cross_cnt, label]
+Index: []
+Training on TSS data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.97      0.96     54617
+         1.0       0.60      0.47      0.53      5564
+
+    accuracy                           0.92     60181
+   macro avg       0.77      0.72      0.74     60181
+weighted avg       0.91      0.92      0.92     60181
+
+------------------Done with TSS data------------------
+Training on TES data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      0.99     63314
+         1.0       0.10      0.02      0.03       629
+
+    accuracy                           0.99     63943
+   macro avg       0.54      0.51      0.51     63943
+weighted avg       0.98      0.99      0.98     63943
+
+------------------Done with TES data------------------
+/datadisk1/ixk5174/tools/berth-ml
+Namespace(tss='data/tss_data.csv', tes='data/tes_data.csv', oversample=0.4)
+TSS: 5564 positives, 54617 negatives
+TES: 629 positives, 63314 negatives
+Training on TSS data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.96      0.96     54617
+         1.0       0.58      0.52      0.55      5564
+
+    accuracy                           0.92     60181
+   macro avg       0.77      0.74      0.75     60181
+weighted avg       0.92      0.92      0.92     60181
+
+------------------Done with TSS data------------------
+Training on TES data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      0.99     63314
+         1.0       0.09      0.04      0.06       629
+
+    accuracy                           0.99     63943
+   macro avg       0.54      0.52      0.53     63943
+weighted avg       0.98      0.99      0.98     63943
+
+------------------Done with TES data------------------
+/datadisk1/ixk5174/tools/berth-ml
+Namespace(tss='data/tss_data.csv', tes='data/tes_data.csv', oversample=0.4)
+TSS: 5564 positives, 54617 negatives
+TES: 629 positives, 63314 negatives
+Training on TSS data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.96      0.96     54617
+         1.0       0.58      0.52      0.55      5564
+
+    accuracy                           0.92     60181
+   macro avg       0.77      0.74      0.75     60181
+weighted avg       0.92      0.92      0.92     60181
+
+------------------Done with TSS data------------------
+Training on TES data
+Fold 1/5
+Training RandomForest...
+Training RandomForest finished
+Fold 2/5
+Training RandomForest...
+Training RandomForest finished
+Fold 3/5
+Training RandomForest...
+Training RandomForest finished
+Fold 4/5
+Training RandomForest...
+Training RandomForest finished
+Fold 5/5
+Training RandomForest...
+Training RandomForest finished
+Classification Reports:
+
+RandomForest:
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      0.99     63314
+         1.0       0.09      0.04      0.06       629
+
+    accuracy                           0.99     63943
+   macro avg       0.54      0.52      0.53     63943
+weighted avg       0.98      0.99      0.98     63943
+
+------------------Done with TES data------------------

@@ -1,0 +1,46 @@
+-----------------------TSS Data-----------------------
+            chrom strand  position  weight_sg  weight_berth  label
+60158  KI270742.1      -         0          5             0      0
+59921        chrM      -         0          6             0      0
+(2, 12)
+(0, 12)
+       position  weight_sg  ...  junction_cross_cnt  label
+count       0.0        0.0  ...                 0.0    0.0
+mean        NaN        NaN  ...                 NaN    NaN
+std         NaN        NaN  ...                 NaN    NaN
+min         NaN        NaN  ...                 NaN    NaN
+25%         NaN        NaN  ...                 NaN    NaN
+50%         NaN        NaN  ...                 NaN    NaN
+75%         NaN        NaN  ...                 NaN    NaN
+max         NaN        NaN  ...                 NaN    NaN
+
+[8 rows x 10 columns]
+-----------------------TES Data-----------------------
+       chrom strand  position  weight_sg  weight_berth  label
+3303    chr1      +         0          0            11      0
+34308  chr11      +         0          0             6      0
+34282  chr11      +         0          0             3      0
+34240  chr11      +         0          0             7      0
+3388    chr1      -         0          0             3      0
+...      ...    ...       ...        ...           ...    ...
+28401   chr8      -         0          0            30      0
+28021   chr8      -         0          0             5      0
+44039  chr15      +         0          0           228      0
+43974  chr15      +         0          0             9      0
+40505  chr13      -         0          0             5      0
+
+[788 rows x 6 columns]
+(788, 12)
+(788, 12)
+       position  weight_sg  ...  junction_cross_cnt  label
+count     788.0      788.0  ...               788.0  788.0
+mean        0.0        0.0  ...                 0.0    0.0
+std         0.0        0.0  ...                 0.0    0.0
+min         0.0        0.0  ...                 0.0    0.0
+25%         0.0        0.0  ...                 0.0    0.0
+50%         0.0        0.0  ...                 0.0    0.0
+75%         0.0        0.0  ...                 0.0    0.0
+max         0.0        0.0  ...                 0.0    0.0
+
+[8 rows x 10 columns]
+Done
