@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from matplotlib import pyplot as plt
 
 def set_home():
     os.chdir("/datadisk1/ixk5174/tools/berth-ml/")
@@ -7,6 +8,8 @@ def set_home():
 prediction_folder_tss = "out/tss/"
 prediction_folder_tes = "out/tes/"
 data_folder = "data/"
+method = "stringtie"
+output_folder = "/datadisk1/ixk5174/long_reads_compare/long_reads_out/berth"
 
 def analyze_data():
     tss_data_path = os.path.join(data_folder, 'tss_data.csv')
@@ -32,7 +35,6 @@ def analyze_data():
     print(tes_data[(tes_data['weight_berth'] > 0 ) & (tes_data['weight_sg'] == 0) & (tes_data['position'] == 0)].shape)
     print(tes_data[(tes_data['weight_berth'] > 0 ) & (tes_data['weight_sg'] == 0) & (tes_data['position'] == 0)].describe())
     # print(tes_data.describe())
-
 
 
 def main():
@@ -66,8 +68,26 @@ def main():
     tes_predictions_correct = tes_predictions_correct[["chrom", "start_position", "position", "name", "label", "strand"]]
     tes_predictions_correct.to_csv(tes_predictions_correct_path, index=False, sep='\t', header=False)
 
+
+def plot_dist(data_file, col, out):
+    df = pd.read_csv(data_file)
+    coldata = df[col].to_numpy()
+    # uniq_val, cnt = np.unique(coldata, return_counts = True)
+    plt.figure()
+    plt.scatter( df[col], df['label'])
+    # plt.hist(df[col], bins=[0,5,10,20,25,30,50,100,200,400,1000,2000])
+    plt.savefig(f'{out}_plot-{col}.jpg', dpi=300)
+
 if __name__ == "__main__":
+    
     set_home()
-    main()
+    plot_dist('data/tss_data.csv', 'left_anchor_padding', 'tss')
+    plot_dist('data/tss_data.csv', 'right_anchor_padding', 'tss')
+    plot_dist('data/tes_data.csv', 'left_anchor_padding', 'tes')
+    plot_dist('data/tes_data.csv', 'right_anchor_padding', 'tes')
+
+
+    # main()
+    # filter_unknown(method, output_folder)
     # analyze_data()
     print("Done")

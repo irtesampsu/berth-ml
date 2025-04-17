@@ -28,6 +28,7 @@ def train_imbalanced_models(X, y, n_splits=5):
     # Initialize models
     models = {
         'RandomForest': RandomForestClassifier(class_weight='balanced', n_estimators=400, random_state=42)
+        # 'RandomForest': RandomForestClassifier(n_estimators=400, random_state=42)
         # 'XGBoost': XGBClassifier(scale_pos_weight=len(y[y==0])/len(y[y==1]), random_state=42),
         # 'SVM': SVC(class_weight='balanced', probability=True, random_state=42)
         # 'LogisticRegression': LogisticRegression(class_weight='balanced', random_state=42)

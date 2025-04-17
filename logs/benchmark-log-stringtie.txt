@@ -1,0 +1,60 @@
+Time taken to read and map reference data: 0.06591224670410156 seconds
+Starting TSS: 12490
+Processed 0 TSS
+Processed 5000 TSS
+Processed 10000 TSS
+Starting TES: 11548
+Processed 0 TES
+Processed 5000 TES
+Processed 10000 TES
+Benchmark Data(TSS):
+  type       chrom  position  +_strand_transcripts  -_strand_transcripts  label
+0  TSS  GL000194.1    115066                     0                     1      0
+1  TSS  GL000195.1     86726                     0                     2      0
+2  TSS  GL000195.1    137958                     4                     0      0
+3  TSS  GL000195.1    142050                     1                     0      0
+4  TSS  GL000195.1    146715                     1                     0      0
+Benchmark Data(TES):
+  type       chrom  position  +_strand_transcripts  -_strand_transcripts  label
+0  TES  GL000194.1     61657                     0                     1      0
+1  TES  GL000195.1     42938                     0                     1      0
+2  TES  GL000195.1     45944                     0                     1      0
+3  TES  GL000195.1    141363                     3                     0      0
+4  TES  GL000195.1    143757                     1                     0      0
+Time taken to get TSS and TES labels: 108.23435878753662 seconds
+Processed 0
+Processed 0
+TSS Prediction Class Distribution:
+prediction
+1    6556
+0    3651
+2    2283
+Name: count, dtype: int64
+TES Prediction Class Distribution:
+prediction
+1    5667
+0    3478
+2    2403
+Name: count, dtype: int64
+Time taken to get neighbourhood predictions: 195.8177444934845 seconds
+TSS Classification Report
+              precision    recall  f1-score   support
+
+           0       0.62      0.40      0.48      5733
+           1       0.61      0.80      0.69      6757
+
+    accuracy                           0.61     12490
+   macro avg       0.62      0.60      0.59     12490
+weighted avg       0.62      0.61      0.60     12490
+
+TES Classification Report
+              precision    recall  f1-score   support
+
+           0       0.61      0.35      0.45      5995
+           1       0.52      0.75      0.61      5553
+
+    accuracy                           0.54     11548
+   macro avg       0.56      0.55      0.53     11548
+weighted avg       0.56      0.54      0.53     11548
+
+Time taken to write predictions: 195.86306595802307 seconds

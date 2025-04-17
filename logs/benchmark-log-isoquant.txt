@@ -1,0 +1,56 @@
+Time taken to read and map reference data: 0.06973505020141602 seconds
+Starting TSS: 6611
+Processed 0 TSS
+Processed 5000 TSS
+Starting TES: 5939
+Processed 0 TES
+Processed 5000 TES
+Benchmark Data(TSS):
+  type       chrom  position  +_strand_transcripts  -_strand_transcripts  label
+0  TSS  GL000195.1     86726                     0                     1      0
+1  TSS  GL000205.2     63676                     0                     2      0
+2  TSS  GL000205.2     64052                     0                     1      0
+3  TSS  GL000219.1     99638                     0                     1      0
+4  TSS  GL000219.1     99642                     0                     2      0
+Benchmark Data(TES):
+  type       chrom  position  +_strand_transcripts  -_strand_transcripts  label
+0  TES  GL000195.1     42938                     0                     1      0
+1  TES  GL000205.2     59716                     0                     1      0
+2  TES  GL000205.2     59906                     0                     1      0
+3  TES  GL000205.2     59912                     0                     1      0
+4  TES  GL000219.1     77559                     0                     1      0
+Time taken to get TSS and TES labels: 48.04037094116211 seconds
+TSS Prediction Class Distribution:
+prediction
+1    4770
+0    1631
+2     210
+Name: count, dtype: int64
+TES Prediction Class Distribution:
+prediction
+1    3275
+0    2162
+2     502
+Name: count, dtype: int64
+Time taken to get neighbourhood predictions: 89.82962083816528 seconds
+TSS Classification Report
+              precision    recall  f1-score   support
+
+           0       0.49      0.50      0.50      1599
+           1       0.84      0.84      0.84      5012
+
+    accuracy                           0.75      6611
+   macro avg       0.67      0.67      0.67      6611
+weighted avg       0.76      0.75      0.76      6611
+
+TES Classification Report
+              precision    recall  f1-score   support
+
+           0       0.63      0.50      0.56      2751
+           1       0.63      0.75      0.69      3188
+
+    accuracy                           0.63      5939
+   macro avg       0.63      0.62      0.62      5939
+weighted avg       0.63      0.63      0.63      5939
+
+Time taken to write predictions: 89.85788822174072 seconds

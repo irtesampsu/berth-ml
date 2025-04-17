@@ -1,0 +1,8 @@
+# ignore all data_files, intermediate files, and output files
+*.csv
+*.tsv
+*.bed
+*.jpg
+__pycache__
+*.pyc
+read_endpoints.txt
